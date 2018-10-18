@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+
+</head>
+
+<body>
+
+<p id="print"></p>
+
+<script>
+
+var numbers = [5,-7,3,16,-32,0];
+var string = "string";
+
+  function listTaker(list)
+  {
+    if (!Array.isArray(list))
+    {
+      throw new Error("TYPE ERROR: Please make sure the argument is an array!");
+    }
+
+    var positives = 0;
+
+    for (i = 0;  i < list.length; i++)
+    {
+      if (list[i] > 0)
+      {
+        positives++;
+      }
+    }
+
+    document.getElementById("print").innerHTML = "There are exactly " + positives + " positive numbers";
+  }
+
+  listTaker(numbers);
+  listTaker(string);
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
